@@ -1,0 +1,174 @@
+\documentclass[a4paper,12pt]{jarticle}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage[dvips]{graphicx}
+\usepackage{ascmac}
+\usepackage{float}	%figure[H]
+
+%--プリアンブル
+\setlength{\topmargin}{30mm}
+\addtolength{\topmargin}{-1in}
+\setlength{\oddsidemargin}{20mm}
+\addtolength{\oddsidemargin}{-1in}
+\setlength{\evensidemargin}{15mm}
+\addtolength{\evensidemargin}{-1in}
+\setlength{\textwidth}{170mm}
+\setlength{\textheight}{240mm}
+\setlength{\headsep}{0mm}
+\setlength{\headheight}{0mm}
+\setlength{\topskip}{0mm}
+
+\title{物質科学のための計算数理I\\
+平成25年度　レポート課題}
+\author{理学系研究科　物理学専攻\\　修士2年　35126070　中郷孝祐}
+\date{\today}
+\begin{document}
+
+\maketitle
+
+\clearpage
+\section{FUNCTION subprogram}
+[PROBLEM１]
+
+1s軌道の半径成分の波動関数$u_{10}(r)$とする。
+\begin{align}
+ u_{10}(r)=2r e^{-r}
+\end{align}
+これを計算する関数プログラムをproblem1.f90として添付する。
+
+プログラムから得られた関数形は次のようになった。
+\begin{figure}[H]
+	        \begin{center}
+	            \includegraphics[clip, width=0.9\columnwidth]{problem1.eps}
+	        \end{center}
+	        \caption{1s軌道の半径成分}
+	        \label{fig:problem1}
+\end{figure}
+
+\section{Numerical integration of ordinary-differential equation}
+
+[PROBLEM2-1]
+
+水素原子の波動関数の半径成分は次のSchr\"{o}dinger方程式を満たす。
+\begin{align}
+\left[ -\frac{1}{2}\frac{d^2}{dr^2} +
+\frac{l(l+1)}{2r^2} -\frac{1}{r} \right] u_{nl} = E_{nl} u_{nl}(r)
+~~~~ r\in [0,\infty]\label{ode1}
+\end{align}
+ここで$r=e^x$という変数変換を施すと、
+\begin{align}
+ \frac{d^2u}{dr^2}
+=\frac{d}{dr}\left( \frac{dx}{dr}\frac{du}{dx} \right)
+=\frac{1}{r^2} \left( \frac{d^2u}{dx^2} -\frac{du}{dx}\right)
+\end{align}
+となることを利用して、
+\begin{align}
+ -\frac{1}{2}\frac{d^2}{dx^2}+\frac{1}{2}\frac{d}{dx}+\left(\frac{l(l+1)}{2}-e^x\right)u_{nl}(x)
+ = E_{nl}r^2u_{nl}(x) 
+~~~~ x \in (-\infty,\infty)
+\end{align}
+が得られる。
+この式に変形した理由としては、図\ref{fig:problem1}をみるとわかるように
+波動関数の傾きが$r=0$付近で急であるため、
+%式\ref{ode1}に$r=0$からNumerov法を用いるよりも 
+変数変換をした方が、急な変化を吸収できるということがあげられる。
+しかし、このままでは一回微分の項が新たに入ってきてしまって、Numerov法を
+用いることができないため、さらに$u_{nl}(x)=e^{x/2}w_{nl}(x)$と置きなおすと
+\begin{align}
+\left[ -\frac{1}{2}\frac{d^2}{dx^2}+\frac{1}{8}+\frac{l(l+1)}{2}
+-e^x-E_{nl}e^{2x}\right] w_{nl}=0
+\end{align}
+\begin{align}
+\frac{d^2}{dx^2}w_{nl}=
+\left[\frac{1}{4}+l(l+1)
+-2e^x-2E_{nl}e^{2x}\right] w_{nl}
+\end{align}
+が得られる。この形は一階微分を含まないので、Numerov法を用いることが出来
+る。
+
+
+[PROBLEM2-2]
+
+\begin{align}
+&u_{10}(r)=2r e^{-r}  &u_{10}'(r)= 2(1-r)e^{-r} \\
+&u_{10}(0)=0          &u_{10}'(0)= 2 \\
+&u_{10}(10)=20 e^{-r} &u_{10}'(10)= -18e^{-10}
+\end{align}
+
+
+
+[PROBLEM2-3]
+本レポートでは$u_{10}(r)$を用いた\ref{ode1}に対してNumrov法を用いた。
+$E=0.49$から$0.51$までの範囲で100個点をとって実行した結果は以下のようになった。
+
+\begin{figure}[H]
+	        \begin{center}
+		 \includegraphics[clip, width=0.9\columnwidth]{problem23.eps}
+	        \end{center}
+	        \caption{Numerov法(forward)による波動関数}
+	        \label{fig:problem23}
+\end{figure}
+
+この結果をみると、エネルギー固有値となる$E=0.50$以外では解が発散してしま
+うことがわかる。
+つまり境界条件から二分法を用いてエネルギー固有値を導出しようとした際に、
+収束を確認できないため計算が無駄に多く必要になってしまうということになる。
+
+
+[PROBLEM2-4]
+
+全問と同じ式を$E=0.49$から$0.51$までの範囲で100個点をとり、
+Numerov法の進んでいく方向を逆向きにして、実行した結果は以下のようになった。
+\begin{figure}[H]
+	        \begin{center}
+	            \includegraphics[clip, width=0.9\columnwidth]{problem2-4}
+	        \end{center}
+	        \caption{Numerov法(backward)による波動関数}
+	        \label{fig:problem24}
+\end{figure}
+前問とは異なりエネルギー固有値となる$E=0.50$付近の値では解が$r=0$で$u=0$付近に収束していることがわかる。
+
+[PROBLEM2-5]
+
+PROBLEM2-3,2-4で得られた結果を考慮して両方を接続することによって、解の収
+束を早く確認することが出来る。
+そのためにWronskian
+\begin{align}
+ W(E_{nl})\equiv
+ u^{0\rightarrow\infty}_{nl}(x)\frac{du^{\infty\rightarrow0}_{nl}(x)}{dx}
+ - u^{\infty\rightarrow0}_{nl}(x)\frac{du^{0\rightarrow\infty}_{nl}(x)}{dx}
+\end{align}
+を考える。本レポートの設定の下で計算し$r=1$で接続すると$W$は以下のような
+振る舞いとなった。
+
+\begin{figure}[H]
+	        \begin{center}
+	            \includegraphics[clip, width=0.9\columnwidth]{problem2-5b.eps}
+	        \end{center}
+	        \caption{$r=1$でのWronskianの振る舞い}
+	        \label{fig:problem1}
+\end{figure}
+
+$W$は$E=0.5$の付近でとても急な関数となっていることがわかる。
+$W$が0になるような$E$をサーチするという問題を考えることによって、
+解を得ることが出来る。
+
+
+[PROBLEM2-6]
+
+Numerov法による波動関数のサーチを
+Wronskianを用いて、解いた結果を以下に示す。
+
+プログラムはproblem2-6.f90として添付している。
+この方法を用いることによって、
+有限回で波動関数が収束し固有値も得ることが出来た。
+
+\begin{figure}[H]
+	        \begin{center}
+
+	            \includegraphics[clip, width=0.9\columnwidth]{problem2-6b.eps}
+	        \end{center}
+	        \caption{Wronskianを用いて計算した波動関数$u_{nl}$}
+	        \label{fig:problem26}
+\end{figure}
+\end{document}
