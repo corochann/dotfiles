@@ -1,45 +1,25 @@
 ;; ---------------------------------------------
-;; åŸºæœ¬è¨­å®š
+;; Šî–{İ’è
 ;; ---------------------------------------------
 
-;; (setq default-directory "c:/Users/kosuke")            ; åˆæœŸãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’è¨­å®š ã“ã‚Œã‚„ã£ã¡ã‚ƒãƒ€ãƒ¡ã€‚ã‚¨ãƒ©ãƒ¼ãŒèµ·ããŸã€‚ï¼ˆé‡ããªã£ã¦ã€çµ‚äº†ã—ãŸãã¦ã‚‚ã§ããªã„ã€‚ï¼‰
-;; (setq default-directory "c:/Users/kosuke")            ; åˆæœŸãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’è¨­å®š ã“ã‚Œã‚„ã£ã¡ã‚ƒãƒ€ãƒ¡ã€‚
+;; (setq default-directory "c:/Users/kosuke")            ; ‰ŠúƒfƒBƒŒƒNƒgƒŠ‚ğİ’è ‚±‚ê‚â‚Á‚¿‚áƒ_ƒBƒGƒ‰[‚ª‹N‚«‚½Bid‚­‚È‚Á‚ÄAI—¹‚µ‚½‚­‚Ä‚à‚Å‚«‚È‚¢Bj
+;; (setq default-directory "c:/Users/kosuke")            ; ‰ŠúƒfƒBƒŒƒNƒgƒŠ‚ğİ’è ‚±‚ê‚â‚Á‚¿‚áƒ_ƒB
 
-;(cd "~/")	       	; C:/Users/kosukeã‚’åˆæœŸãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ã™ã‚‹
-; keyboard macro setting
+;(cd "~/")	       	; C:/Users/kosuke‚ğ‰ŠúƒfƒBƒŒƒNƒgƒŠ‚É‚·‚é
 
-;; ---------------------------------------------
-;; ã‚­ãƒ¼ãƒã‚¤ãƒ³ãƒ‰
-;; ---------------------------------------------
-
-; ãƒãƒƒãƒ•ã‚¡ä¸€è¦§ã‚’ä½¿ã„æ˜“ã
-(global-set-key "\C-x\C-b" 'buffer-menu)
-
-; C-hã‚’ãƒãƒƒã‚¯ã‚¹ãƒšãƒ¼ã‚¹ã«
-(global-set-key "\C-h" 'delete-backward-char)
-
-; C-h ã«å‰²ã‚Šå½“ã¦ã‚‰ã‚Œã¦ã„ã‚‹é–¢æ•° help-command ã‚’ C-x C-h ã«å‰²ã‚Šå½“ã¦ã‚‹
-(define-key global-map "\C-x\C-h" 'help-command)
-
-; help-for-help ã‚’ F1ã«
-(global-set-key [f1] 'help-for-help)
-(global-set-key "\M-?" 'help-for-help)
-
-(global-set-key [?\C-\;] "\C-e\C-j") ;ã€€C-;ã§ãã®è¡Œã®é€”ä¸­ã§ã‚‚æ”¹è¡Œã™ã‚‹ã€‚
-
-;; paren-mode æ‹¬å¼§ã‚’ãƒã‚¤ãƒ©ã‚¤ãƒˆ
+;; paren-mode Š‡ŒÊ‚ğƒnƒCƒ‰ƒCƒg
 (setq show-paren-delay 0)
 (show-paren-mode t)
-;; parenã®ã‚¹ã‚¿ã‚¤ãƒ«: expressionã¯æ‹¬å¼§å†…ã‚‚å¼·èª¿è¡¨ç¤º
+;; paren‚ÌƒXƒ^ƒCƒ‹: expression‚ÍŠ‡ŒÊ“à‚à‹­’²•\¦
 ;(setq show-paren-style 'expression)
 (setq show-paren-style 'parenthesis)
-;; ãƒ•ã‚§ã‚¤ã‚¹ã‚’å¤‰æ›´ã™ã‚‹
-(set-face-background 'show-paren-match-face "SlateBlue2") ;æ‹¬å¼§ã®backgroundã«è‰²ä»˜ã‘ã™ã‚‹ã€‚å«Œãªã‚‰nilã«ã™ã‚Œã°ã„ã„ã€‚
-;(set-face-underline-p 'show-paren-match-face nil)  ;underlineãŒã„ã„ãªã‚‰ã“ã£ã¡ã®nilã‚’"color"ã«å¤‰æ›´
+;; ƒtƒFƒCƒX‚ğ•ÏX‚·‚é
+(set-face-background 'show-paren-match-face "SlateBlue2") ;Š‡ŒÊ‚Ìbackground‚ÉF•t‚¯‚·‚éBŒ™‚È‚çnil‚É‚·‚ê‚Î‚¢‚¢B
+;(set-face-underline-p 'show-paren-match-face nil)  ;underline‚ª‚¢‚¢‚È‚ç‚±‚Á‚¿‚Ìnil‚ğ"color"‚É•ÏX
 
 
 
-;; load-pathã‚’è¿½åŠ ã™ã‚‹é–¢æ•°ã‚’å®šç¾©
+;; load-path‚ğ’Ç‰Á‚·‚éŠÖ”‚ğ’è‹`
 (defun add-to-load-path (&rest paths)
   (let(path)
     (dolist (path paths paths)
@@ -49,31 +29,31 @@
 	(if (fboundp 'normal-top-level-add-subdirs-to-load-path)
 	    (normal-top-level-add-subdirs-to-load-path))))))
 
-;; å¼•æ•°ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã¨ãã®ã‚µãƒ–ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’load-pathã«è¿½åŠ 
+;; ˆø”‚ÌƒfƒBƒŒƒNƒgƒŠ‚Æ‚»‚ÌƒTƒuƒfƒBƒŒƒNƒgƒŠ‚ğload-path‚É’Ç‰Á
 (add-to-load-path "elisp" "conf" "public_repos")
 
 
-;; auto-installã®è¨­å®š
+;; auto-install‚Ìİ’è
 (when (require 'auto-install nil t)
-  ;; Install directoryã®è¨­å®š
+  ;; Install directory‚Ìİ’è
   (setq auto-install-directory "~/.emacs.d/elisp/")
-  ;; EmacsWikiã«ç™»éŒ²ã•ã‚Œã¦ã„ã‚‹elispã®åå‰ã‚’å–å¾—
+  ;; EmacsWiki‚É“o˜^‚³‚ê‚Ä‚¢‚éelisp‚Ì–¼‘O‚ğæ“¾
   (auto-install-update-emacswiki-package-name t)
-  ;; å¿…è¦ã§ã‚ã‚Œã°ãƒ—ãƒ­ã‚­ã‚·ã®è¨­å®šã‚’è¡Œã†
+  ;; •K—v‚Å‚ ‚ê‚ÎƒvƒƒLƒV‚Ìİ’è‚ğs‚¤
   ;; (setq url-proxy-services '(("http" . "localhost:8339")))
-  ;; install-elispã®é–¢æ•°ã‚’åˆ©ç”¨å¯èƒ½ã«ã™ã‚‹
+  ;; install-elisp‚ÌŠÖ”‚ğ—˜—p‰Â”\‚É‚·‚é
   (auto-install-compatibility-setup))
 
 
-;; /elisp/auto-install.el ã®èª­ã¿è¾¼ã¿
+;; /elisp/auto-install.el ‚Ì“Ç‚İ‚İ
 ;; (load "auto-install")
 
-;; redo+ã®è¨­å®š
+;; redo+‚Ìİ’è
 (when (require 'redo+ nil t)
-  ;; C-'ã«redoã‚’å‰²ã‚Šå½“ã¦
+  ;; C-'‚Éredo‚ğŠ„‚è“–‚Ä
   ;;
  (global-set-key (kbd "C-'") 'redo)
-  ;; æ—¥æœ¬èªã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã®å ´åˆC-.ãªã©ãŒè‰¯ã„ã‹ã‚‚
+  ;; “ú–{ŒêƒL[ƒ{[ƒh‚Ìê‡C-.‚È‚Ç‚ª—Ç‚¢‚©‚à
   (global-set-key (kbd "C-.") 'redo)
 		  )
 
@@ -81,20 +61,20 @@
 ;;  (auto-install-batch "anything")
 (when (require 'anything nil t)
   (setq
-   ;; å€™è£œã‚’è¡¨ç¤ºã™ã‚‹ã¾ã§ã®æ™‚é–“ã€‚ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯0.5
+   ;; Œó•â‚ğ•\¦‚·‚é‚Ü‚Å‚ÌŠÔBƒfƒtƒHƒ‹ƒg‚Í0.5
    anything-idle-delay 0.3
-   ;; ã‚¿ã‚¤ãƒ—ã—ã¦å†æç”»ã™ã‚‹ã¾ã§ã®æ™‚é–“ã€‚ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯0.1
+   ;; ƒ^ƒCƒv‚µ‚ÄÄ•`‰æ‚·‚é‚Ü‚Å‚ÌŠÔBƒfƒtƒHƒ‹ƒg‚Í0.1
    anything-input-idle-delay 0.2
-   ;; å€™è£œã®æœ€å¤§è¡¨ç¤ºæ•°ã€‚ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯50
+   ;; Œó•â‚ÌÅ‘å•\¦”BƒfƒtƒHƒ‹ƒg‚Í50
    anything-candidate-number-limit 100
-   ;; å€™è£œãŒå¤šã„ã¨ãã«ä½“æ„Ÿé€Ÿåº¦ã‚’æ—©ãã™ã‚‹
+   ;; Œó•â‚ª‘½‚¢‚Æ‚«‚É‘ÌŠ´‘¬“x‚ğ‘‚­‚·‚é
    anything-quick-update t
-   ;; å€™è£œé¸æŠã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆã‚’ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆã«
+   ;; Œó•â‘I‘ğƒVƒ‡[ƒgƒJƒbƒg‚ğƒAƒ‹ƒtƒ@ƒxƒbƒg‚É
    anything-enable-shortcuts 'alphabet)
 
   (when (require 'anything-config nil t)
-    ;; rootæ¨©é™ã§ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ã‚’å®Ÿè¡Œã™ã‚‹ã¨ãã®ã‚³ãƒãƒ³ãƒ‰
-    ;; ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯"su"
+    ;; rootŒ ŒÀ‚ÅƒAƒNƒVƒ‡ƒ“‚ğÀs‚·‚é‚Æ‚«‚ÌƒRƒ}ƒ“ƒh
+    ;; ƒfƒtƒHƒ‹ƒg‚Í"su"
     (setq anything-su-or-sudo "sudo"))
 
   (require 'anything-match-plugin nil t)
@@ -104,7 +84,7 @@
     (require 'anything-migemo nil t))
 
   (when (require 'anythingcomplete nil t)
-    ;; lispã‚·ãƒ³ãƒœãƒ«ã®è£œå®Œå€™è£œã®å†æ¤œç´¢æ™‚é–“
+    ;; lispƒVƒ“ƒ{ƒ‹‚Ì•âŠ®Œó•â‚ÌÄŒŸõŠÔ
     (anything-lisp-complete-symbol-set-timer 150))
 
   (require 'anything-show-completion nil t)
@@ -113,23 +93,44 @@
     (require 'anything-auto-install nil t))
 
   (when (require 'descbinds-anything nil t)
-    ;; describe-bindingsã‚’Anythingã«ç½®ãæ›ãˆã‚‹
+    ;; describe-bindings‚ğAnything‚É’u‚«Š·‚¦‚é
     (descbinds-anything-install)))
-;; M-yã«anything-show-kill-ringã‚’å‰²ã‚Šå½“ã¦ã‚‹
+;; M-y‚Éanything-show-kill-ring‚ğŠ„‚è“–‚Ä‚é
 (define-key global-map (kbd "M-y") 'anything-show-kill-ring)
 
-;; è¦color-moccur.el
+;; —vcolor-moccur.el
 (when (require 'anything-c-moccur nil t)
   (setq
-   ;; anything-c-moccurç”¨ 'anything-idle-delay'
+   ;; anything-c-moccur—p 'anything-idle-delay'
    anything-c-moccur-anything-idle-delay 0.1
-   ;; ãƒãƒƒãƒ•ã‚¡ã®æƒ…å ±ã‚’ãƒã‚¤ãƒ©ã‚¤ãƒˆã™ã‚‹
+   ;; ƒoƒbƒtƒ@‚Ìî•ñ‚ğƒnƒCƒ‰ƒCƒg‚·‚é
    anything-c-moccur-higligt-info-line-flag t
-   ;; ç¾åœ¨é¸æŠä¸­ã®å€™è£œã®ä½ç½®ã‚’ã»ã‹ã®windowsã«è¡¨ç¤ºã™ã‚‹
+   ;; Œ»İ‘I‘ğ’†‚ÌŒó•â‚ÌˆÊ’u‚ğ‚Ù‚©‚Ìwindows‚É•\¦‚·‚é
    anything-c-moccur-enable-initial-pattern t)
-  ;; C-M-oã«anything-c-moccur-occur-by-moccurã‚’å‰²ã‚Šå½“ã¦ã‚‹
+  ;; C-M-o‚Éanything-c-moccur-occur-by-moccur‚ğŠ„‚è“–‚Ä‚é
   (global-set-key (kbd "C-M-o") 'anything-c-moccur-occur-by-moccur))
 
+
+
+
+
+
+
+;; ---------------------------------------------
+;; ƒL[ƒoƒCƒ“ƒh
+;; ---------------------------------------------
+
+; ƒoƒbƒtƒ@ˆê——‚ğg‚¢ˆÕ‚­
+(global-set-key "\C-x\C-b" 'buffer-menu)
+
+; C-h‚ğƒoƒbƒNƒXƒy[ƒX‚É
+(global-set-key "\C-h" 'delete-backward-char)
+
+; C-h ‚ÉŠ„‚è“–‚Ä‚ç‚ê‚Ä‚¢‚éŠÖ” help-command ‚ğ C-x C-h ‚ÉŠ„‚è“–‚Ä‚é
+(define-key global-map "\C-x\C-h" 'help-command)
+
+; help-for-help ‚ğ F1‚É
+(global-set-key [f1] 'help-for-help)
 
 
 
@@ -138,50 +139,51 @@
 ;(add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp//ac-dict")
 ;(ac-config-default)
 
-; auto-completeã®è¨­å®š
+
+; auto-complete‚Ìİ’è
 (when (require 'auto-complete-config nil t)
   (add-to-list 'ac-dictionary-directories
   "~/.emacs.d/elisp/ac-dict")
   (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
   (ac-config-default))
 
-;; color-moccurã®è¨­å®š
+;; color-moccur‚Ìİ’è
 (when (require 'color-moccur nil t)
-  ;; M-oã«occur-by-moccurã‚’å‰²ã‚Šå½“ã¦
+  ;; M-o‚Éoccur-by-moccur‚ğŠ„‚è“–‚Ä
   (define-key global-map (kbd "M-o") 'occur-by-moccur)
-  ;; ã‚¹ãƒšãƒ¼ã‚¹åŒºåˆ‡ã‚Šã§ANDæ¤œç´¢
+  ;; ƒXƒy[ƒX‹æØ‚è‚ÅANDŒŸõ
   (setq moccur-spig-word t)
-  ;; ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªæ¤œç´¢ã®ã¨ãé™¤å¤–ã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«
+  ;; ƒfƒBƒŒƒNƒgƒŠŒŸõ‚Ì‚Æ‚«œŠO‚·‚éƒtƒ@ƒCƒ‹
   (add-to-list 'dmoccur-exclusion-mask "\\.DS_Store")
   (add-to-list 'dmoccur-exclusion-mask "^#.+#$")
-  ;; Migemoã‚’åˆ©ç”¨ã§ãã‚‹ç’°å¢ƒã§ã‚ã‚Œã°Migemoã‚’ä½¿ã†
+  ;; Migemo‚ğ—˜—p‚Å‚«‚éŠÂ‹«‚Å‚ ‚ê‚ÎMigemo‚ğg‚¤
   (when (and (executable-find "cmigemo")
 	     (require 'migemo nil t))
     (setq moccur-use-migemo t)))
-;; 24.3ã‹ã‚‰ã“ã®æ–‡ã„ã‚Œãªã„ã¨ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹ã¨ã‹ï¼Ÿï¼Ÿ
+;; 24.3‚©‚ç‚±‚Ì•¶‚¢‚ê‚È‚¢‚ÆƒGƒ‰[‚É‚È‚é‚Æ‚©HH
 (setq search-whitespace-regexp nil)
 
-;; moccur-editã®è¨­å®š
+;; moccur-edit‚Ìİ’è
 (require 'moccur-edit nil t)
 
-;; undohistã®è¨­å®š
+;; undohist‚Ìİ’è
 (when (require 'undohist nil t)
   (undohist-initialize))
 
-;; undo-treeã®è¨­å®š
+;; undo-tree‚Ìİ’è
 (when (require 'undo-tree nil t)
   (global-undo-tree-mode))
 
-;; package.elã®è¨­å®š
+;; package.el‚Ìİ’è
 (when (require 'package nil t)
-  ;; ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ãƒ¬ãƒã‚¸ãƒˆãƒªã«Marmaladeã¨é–‹ç™ºè€…é‹å–¶ã®ELPAã‚’è¿½åŠ 
+  ;; ƒpƒbƒP[ƒWƒŒƒ|ƒWƒgƒŠ‚ÉMarmalade‚ÆŠJ”­Ò‰^‰c‚ÌELPA‚ğ’Ç‰Á
   (add-to-list 'package-archives
 	       '("marmalade" . "http://marmalade-repo.org/packages/"))
   (add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/"))
-  ;; ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã«ãƒ­ãƒ¼ãƒ‰ãƒ‘ã‚¹ã‚’é€šã—ã¦èª­ã¿è¾¼ã‚€
+  ;; ƒCƒ“ƒXƒg[ƒ‹‚µ‚½ƒpƒbƒP[ƒW‚Éƒ[ƒhƒpƒX‚ğ’Ê‚µ‚Ä“Ç‚İ‚Ş
   (package-initialize))
 
-;; point-undoã®è¨­å®š
+;; point-undo‚Ìİ’è
 (when (require 'point-undo nil t)
   ;;(define-key global-map [f5] 'point-undo)
   ;;(define-key global-map [f6] 'point-redo)
@@ -190,51 +192,51 @@
   )
 
 
-;; cssm-mode ã®è¨­å®š
-;; css-mode ã‚’ä¸Šæ›¸ãã—ã¦ã„ã‚‹ã€‚å…ƒã®css-modeã‚’åˆ©ç”¨ã—ãŸã„å ´åˆã¯cssm-modeã‚’åˆ©ç”¨ã—ã¦ã„ã‚‹css-mode.elã¨css-mode.elcã‚’å‰Šé™¤ã™ã‚Œã°ã„ã„
+;; cssm-mode ‚Ìİ’è
+;; css-mode ‚ğã‘‚«‚µ‚Ä‚¢‚éBŒ³‚Ìcss-mode‚ğ—˜—p‚µ‚½‚¢ê‡‚Ícssm-mode‚ğ—˜—p‚µ‚Ä‚¢‚écss-mode.el‚Æcss-mode.elc‚ğíœ‚·‚ê‚Î‚¢‚¢
 (defun css-mode-hooks ()
   "css-mode hooks"
-  ;; ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã‚’Cã‚¹ã‚¿ã‚¤ãƒ«ã«ã™ã‚‹
+  ;; ƒCƒ“ƒfƒ“ƒg‚ğCƒXƒ^ƒCƒ‹‚É‚·‚é
   (setq cssm-indent-function #'cssm-c-style-indenter)
-  ;; ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆå¹…ã‚’2ã«ã™ã‚‹
+  ;; ƒCƒ“ƒfƒ“ƒg•‚ğ2‚É‚·‚é
   (setq cssm-indent-level 2)
-  ;; ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã«ã‚¿ãƒ–æ–‡å­—ã‚’ä½¿ã‚ãªã„
+  ;; ƒCƒ“ƒfƒ“ƒg‚Éƒ^ƒu•¶š‚ğg‚í‚È‚¢
   (setq-default indent-tabs-mode nil)
-  ;; é–‰ã˜ã‹ã£ã“ã®å‰ã«æ”¹è¡Œã‚’æŒ¿å…¥ã™ã‚‹
+  ;; •Â‚¶‚©‚Á‚±‚Ì‘O‚É‰üs‚ğ‘}“ü‚·‚é
   (setq cssm-newline-before-closing-bracket t))
 
 (add-hook 'css-mode-hook 'css-mode-hooks)
 
 
-;;; ruby minor mode ã®å„ç¨®è¨­å®š
+;;; ruby minor mode ‚ÌŠeíİ’è
 ;; ruby-electric
-;; æ‹¬å¼§ã®è‡ªå‹•æŒ¿å…¥
+;; Š‡ŒÊ‚Ì©“®‘}“ü
 (require 'ruby-electric nil t)
-;; endã«å¯¾å¿œã™ã‚‹è¡Œã®ãƒã‚¤ãƒ©ã‚¤ãƒˆ
+;; end‚É‘Î‰‚·‚és‚ÌƒnƒCƒ‰ƒCƒg
 (when (require 'ruby-block nil t)
   (setq ruby-block-highlight-toggle t))
-;; ã‚¤ãƒ³ã‚¿ãƒ©ã‚¯ãƒ†ã‚£ãƒ–Rubyã‚’åˆ©ç”¨ã™ã‚‹
+;; ƒCƒ“ƒ^ƒ‰ƒNƒeƒBƒuRuby‚ğ—˜—p‚·‚é
 (autoload 'run-ruby "inf-ruby"
   "Run an inferior Ruby process")
 (autoload 'inf-ruby-keys "inf-ruby"
   "Set local key defs for inf-ruby in ruby-mode")
 
-;; ruby-mode-hookç”¨ã®é–¢æ•°ã‚’å®šç¾©
+;; ruby-mode-hook—p‚ÌŠÖ”‚ğ’è‹`
 (defun ruby-mode-hooks ()
   (inf-ruby-keys)
   (ruby-electric-mode t)
   (ruby-block-mode t))
-;; ruby-mode-hookã«è¿½åŠ 
+;; ruby-mode-hook‚É’Ç‰Á
 (add-hook 'ruby-mode-hook 'ruby-mode-hooks)
 
 
-;;flymakeã®èª­ã¿è¾¼ã¿
+;;flymake‚Ì“Ç‚İ‚İ
 (require 'flymake nil t)
-;; flymake-cursorã®èª­ã¿è¾¼ã¿ã€‚
+;; flymake-cursor‚Ì“Ç‚İ‚İB
 (require 'flymake-cursor nil t)
 
 
-;; flymakeã§ä¸‹ã®ãƒ©ã‚¤ãƒ³ã„ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤º
+;; flymake‚Å‰º‚Ìƒ‰ƒCƒ“‚¢ƒGƒ‰[ƒƒbƒZ[ƒW‚ğ•\¦
 (defun my-flymake-display-err-menu-for-current-line ()
   "Displays the error/warning for the current line via popup-tip"
   (interactive)
@@ -246,23 +248,23 @@
                                   (nth 0 err))
                               (nth 1 menu-data) "\n")))))
 
-;; ã‚¨ãƒ©ãƒ¼æ–‡ã‚’ã‚¸ãƒ£ãƒ³ãƒ—ã™ã‚‹ã€€ã‚³ãƒãƒ³ãƒ‰å‰²ã‚Šå½“ã¦ã€‚
+;; ƒGƒ‰[•¶‚ğƒWƒƒƒ“ƒv‚·‚é@ƒRƒ}ƒ“ƒhŠ„‚è“–‚ÄB
 (global-set-key "\M-n" 'flymake-goto-next-error)
 (global-set-key "\M-p" 'flymake-goto-prev-error)
 
 
 
 
-;;; Cè¨€èªç³»ã®Flymakeã®è¨­å®š
+;;; CŒ¾ŒêŒn‚ÌFlymake‚Ìİ’è
 (add-hook 'c++-mode-hook
 	  '(lambda ()
 	     (flymake-mode t)))
-;; Makefileã®ç¨®é¡ã‚’å®šç¾©
+;; Makefile‚Ìí—Ş‚ğ’è‹`
 (defvar flymake-makefile-filenames
   '("Makefile" "makefile" "GNUmakefile")
   "File names for make.")
 
-;; MakefileãŒãªã‘ã‚Œã°ã‚³ãƒãƒ³ãƒ‰ã‚’ç›´æ¥åˆ©ç”¨ã™ã‚‹ã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³ã‚’ç”Ÿæˆ
+;; Makefile‚ª‚È‚¯‚ê‚ÎƒRƒ}ƒ“ƒh‚ğ’¼Ú—˜—p‚·‚éƒRƒ}ƒ“ƒhƒ‰ƒCƒ“‚ğ¶¬
 (defun flymake-get-make-gcc-cmdline (source base-dir)
   (let (found)
     (dolist (makefile flymake-makefile-filenames)
@@ -283,7 +285,7 @@
 		  "-Wall"
 		  source)))))
 
-;; FlymakeåˆæœŸåŒ–é–¢æ•°ã®ç”Ÿæˆ
+;; Flymake‰Šú‰»ŠÖ”‚Ì¶¬
 (defun flymake-simple-make-gcc-init-impl
   (create-temp-f use-relative-base-dir
 		 use-relative-source build-file-name get-cmdline-f)
@@ -304,7 +306,7 @@ Use CREATE-TEMP-F for creating temp copy."
 		 get-cmdline-f))))
     args))
 
-;; åˆæœŸé–¢æ•°ã®å®šç¾©
+;; ‰ŠúŠÖ”‚Ì’è‹`
 (defun flymake-simple-make-gcc-init ()
   (message "%s" (flymake-simple-make-gcc-init-impl
 		 'flymake-create-temp-inplace t t "Makefile"
@@ -313,7 +315,7 @@ Use CREATE-TEMP-F for creating temp copy."
    'flymake-create-temp-inplace t t "Makefile"
    'flymake-get-make-gcc-cmdline))
 
-;; æ‹¡å¼µå­ .c,.cpp, .c++ãªã©ã®æ™‚ã«ä¸Šè¨˜é–¢æ•°ã‚’åˆ©ç”¨
+;; Šg’£q .c,.cpp, .c++‚È‚Ç‚Ì‚Éã‹LŠÖ”‚ğ—˜—p
 (add-to-list 'flymake-allowed-file-name-masks
 ;;	     '("a.cpp"
 ;;	     '(".+\.\(c\|cpp\|c++\)"
@@ -321,18 +323,9 @@ Use CREATE-TEMP-F for creating temp copy."
 	       flymake-simple-make-gcc-init))
 
 
-;; Rubyç”¨Flymakeã®è¨­å®š
-(defun flymake-ruby-init ()
-  (list "ruby" (list "-c" (flymake-init-create-temp-buffer-copy
-			  'flymake-create-temp-inplace))))
-(add-to-list 'flymake-allowed-file-name-masks
-	     '("\\.rb\\'" flymake-ruby-init))
-(add-to-list 'flymake-err-line-patterns
-	     '("\\(.*\\):(\\[0-9]+\\): \\(.*\\)" 1 2 nil 3))
 
-
-;;;Flycheckã«ã‚ˆã‚‹flymakeã®å®Ÿè£…ã€‚
-(require 'flycheck nil t)
+;;;Flycheck‚É‚æ‚éflymake‚ÌÀ‘•B
+(require 'flycheck)
 ;; Python
 ;(add-hook 'python-mode-hook 'flycheck-mode)
 
@@ -345,17 +338,17 @@ Use CREATE-TEMP-F for creating temp copy."
 (autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
 ;(setq load-path (cons "~/src/yatex" load-path))
 (setq tex-command "platex")
-;;;ãƒ—ãƒ¬ãƒ“ãƒ¥ãƒ¼ãƒ¯ã®è¨­å®š
-(setq dvi2-command "c:/w32tex/dviout/dviout") ;windowsç”¨ã®è¨­å®š
+;;;ƒvƒŒƒrƒ…[ƒ‚Ìİ’è
+(setq dvi2-command "c:/w32tex/dviout/dviout") ;windows—p‚Ìİ’è
 ;(setq dvi2-command "xdvi -geo 950x940+0+0 -s 3 -display $DISPLAY")
 
-;;å°åˆ·ã‚³ãƒãƒ³ãƒ‰
+;;ˆóüƒRƒ}ƒ“ƒh
 (setq dviprint-command-format "dvipdfmx %s ")
 ;(setq dviprint-command-format "dvips -f %f %t %s | lpr")
 (setq dviprint-from-format "-p %b")
 (setq dviprint-to-format "-l %e")
 
-;; æ–‡ç« ä½œæˆæ™‚ã®æ—¥æœ¬èªæ–‡å­—ã‚³ãƒ¼ãƒ‰
+;; •¶Íì¬‚Ì“ú–{Œê•¶šƒR[ƒh
 ;; 0: no-converion
 ;; 1: Shift JIS (windows & dos default)
 ;; 2: ISO-2022-JP (other default)
@@ -365,25 +358,25 @@ Use CREATE-TEMP-F for creating temp copy."
 ;;help file
 (setq YaTeX-help-file "~/.vine-opt/share/emacs/site-lisp/YATEXHLP.jp")
 
-;;;ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚º
-;;;AMS-LaTeX ã‚’ä½¿ã†
+;;;ƒJƒXƒ^ƒ}ƒCƒY
+;;;AMS-LaTeX ‚ğg‚¤
 (setq YaTeX-use-AMS-LaTeX t)
 
-;;sectionå‹è£œé–“ã®è¦å®šå€¤
+;;sectionŒ^•âŠÔ‚Ì‹K’è’l
 ;(setq section-name "section")
 
-;;Begin ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆã®ç¦æ­¢(ã„ããªã‚Šè£œå®Œå…¥åŠ›)
+;;Begin ƒVƒ‡[ƒgƒJƒbƒg‚Ì‹Ö~(‚¢‚«‚È‚è•âŠ®“ü—Í)
 ;(setq YaTeX-no-begend-shortcut t)
 
-;;æ•°å¼ã®è‰²ä»˜ã‘
+;;”®‚ÌF•t‚¯
 (if (featurep 'hilit19)
       (hilit-translate
        formula 'DeepPink1))
 
-;;[prefix] g ã§ç›¸æ‰‹ã®ãƒ•ã‚¡ã‚¤ãƒ«ãŒãªã‹ã£ãŸã‚‰æ–°è¦ä½œæˆ 
+;;[prefix] g ‚Å‘Šè‚Ìƒtƒ@ƒCƒ‹‚ª‚È‚©‚Á‚½‚çV‹Kì¬ 
 (setq YaTeX-create-file-prefix-g t)
 
-;;æ•°å¼ãƒ¢ãƒ¼ãƒ‰ã®";"è£œé–“ã®å¼·åŒ–
+;;”®ƒ‚[ƒh‚Ì";"•âŠÔ‚Ì‹­‰»
 (setq YaTeX-math-sign-alist-private
       '(("q"         "quad"          "__")
 	("qq"        "qquad"         "____")
@@ -395,7 +388,7 @@ Use CREATE-TEMP-F for creating temp copy."
 	("bigot"     "bigotimes"     "_\n(x)\n ~")
 	("pl"        "varprojlim"    "lim\n<--")
 	))
-;;æ•°å¼ãƒ¢ãƒ¼ãƒ‰ã®","è£œé–“
+;;”®ƒ‚[ƒh‚Ì","•âŠÔ
 (setq YaTeX-math-funcs-list
       '(("s"	"sin"           "sin")
 	("c"    "cos"           "cos") 
@@ -427,7 +420,7 @@ Use CREATE-TEMP-F for creating temp copy."
       '(("," . YaTeX-math-funcs-list)
 	))
 
-;; Yatex-mode ã® hook è¨­å®š
+;; Yatex-mode ‚Ì hook İ’è
 (add-hook 'yatex-mode-hook
 	  '(lambda()
 	    (local-set-key "\C-c\C-c" "\C-ctj")
@@ -438,48 +431,17 @@ Use CREATE-TEMP-F for creating temp copy."
 
 
 
-;;; multi-termã®è¨­å®š
+;;; multi-term‚Ìİ’è
 ;(when (require 'multi-term nil t)
-;  ;; ä½¿ç”¨ã™ã‚‹ã‚·ã‚§ãƒ«ã‚’æŒ‡å®š
-;  (setq multi-term-program "c:/shell.w32-ix86/bash.exe") ;;ã“ã‚Œã¯Windowså°‚ç”¨ã®è¨­å®š
+;  ;; g—p‚·‚éƒVƒFƒ‹‚ğw’è
+;  (setq multi-term-program "c:/shell.w32-ix86/bash.exe") ;;‚±‚ê‚ÍWindowsê—p‚Ìİ’è
 ;  )
 
-;; ELScreenã®è¨­å®š
-;; prefix keyã®å¤‰æ›´(åˆæœŸå€¤C-z)
+;; ELScreen‚Ìİ’è
+;; prefix key‚Ì•ÏX(‰Šú’lC-z)
 ;; (setq elscreen-prefix-key (kbd "C-t"))
 (when (require 'elscreen nil t)
-  ;; C-z C-zã‚’åˆ©ç”¨ã—ãŸå ´åˆã«Emacs Defaultã®C-zã‚’åˆ©ç”¨ã™ã‚‹
+  ;; C-z C-z‚ğ—˜—p‚µ‚½ê‡‚ÉEmacs Default‚ÌC-z‚ğ—˜—p‚·‚é
   (if window-system
       (define-key elscreen-map (kbd "C-z") 'iconify-or-deiconify-frame)
     (define-key elscreen-map (kbd "C-z") 'suspend-emacs)))
-
-
-;; 2011/09/19
-;; èµ·å‹•æ™‚ã®ã‚µã‚¤ã‚º,è¡¨ç¤ºä½ç½®,ãƒ•ã‚©ãƒ³ãƒˆã‚’æŒ‡å®š
-(setq initial-frame-alist
-     (append (list
-       '(width . 100)
-       '(height . 45)
-;       '(top . 0)
-;       '(left . 0)
-       )
-      initial-frame-alist))
-(setq default-frame-alist initial-frame-alist)
-
-;; 2011/09/03 emacs ã®åˆæœŸç”»é¢ã€€ä¸‹ã®Tutorialãªãã—ã¦1ç”»é¢è¡¨ç¤ºã«ã™ã‚‹
-(setq inhibit-startup-message t)
-
-
-;; LINUXã®æ™‚ã¯mozc.elã‚’ç”¨ã„ã¦æ—¥æœ¬èªå…¥åŠ›
-(when (eq system-type 'gnu/linux)
-  (require 'mozc nil t)
-  (set-language-environment "Japanese")
-  (setq default-input-method "japanese-mozc")
-  (setq mozc-candidate-style 'overlay)
-  (setq mozc-color "red")
-)
-
-
-;; cua-modeã®è¨­å®š
-(cua-mode t)
-(setq cua-enable-cua-keys nil) ; cuaã‚­ãƒ¼ãƒã‚¤ãƒ³ãƒ‰ã‚’ç„¡åŠ¹ã«ã™ã‚‹ã€‚

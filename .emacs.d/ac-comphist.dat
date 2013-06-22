@@ -1,4 +1,32 @@
-((("align-for-YaTeX" .
+((("flymake-err-line-patterns" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("flymake-err-info" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("flymake-ruby-init" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("flymake-allowed-file-name-masks" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("flymake" .
+   [0 0 0 0 1 0 0])
+  ("add-to-list" .
+   [0 0 0 0 0 0 0 0 1 1 0])
+  ("flymake-create-temp-inplace" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("flymake-init-create-temp-buffer-copy" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("list" .
+   [2 0 0 0])
+  ("defun" .
+   [1 0 0 0 0])
+  ("cua-mode" .
+   [1 0 0 1 0 0 0 0])
+  ("system-type" .
+   [0 0 0 0 0 0 1 0 0 0 0])
+  ("window" .
+   [0 0 0 0 0 1])
+  ("eq" .
+   [2 0])
+  ("align-for-YaTeX" .
    [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
   ("local-set-key" .
    [0 0 0 0 0 0 1 0 0 0 0 0 0])
@@ -25,19 +53,19 @@
   ("define-key" .
    [0 0 0 0 0 0 0 1 0 1])
   ("window-system" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+   [0 0 0 0 0 0 0 0 0 2 0 0 0])
   ("if" .
    [1 0])
   ("Default" .
    [1 0 0 0 0 0 0])
   ("when" .
-   [1 0 0 0])
+   [2 0 0 0])
   ("default" .
    [1 0 0 0 0 0 0])
   ("elscreen" .
    [1 0 0 2 1 0 0 0])
   ("setq" .
-   [1 0 0 0])
+   [4 0 0 0])
   ("key" .
    [1 0 0])
   ("undo" .
@@ -45,12 +73,26 @@
   ("undohist" .
    [2 0 0 0 0 0 0 0])
   ("require" .
-   [2 0 0 0 0 1 0])
+   [3 0 0 0 0 1 0])
   ("nil" .
-   [2 0 0])
+   [6 0 0])
   ("undohist-initialize" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("delta" .
    [0 0 1 0 0])
   ("flymake-simple-make-gcc-init" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])))
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("mozc" .
+   [1 0 0 0])
+  ("set" .
+   [1 0 0])
+  ("default-input-method" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("Japanese" .
+   [0 0 0 0 0 0 1 0])
+  ("s" .
+   [1])
+  ("set-language-info" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("set-language-environment" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])))
